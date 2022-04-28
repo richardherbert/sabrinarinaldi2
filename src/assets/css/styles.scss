@@ -1,0 +1,40 @@
+// 1. Import Fonts
+@import 'https://fonts.googleapis.com/css?family=EB+Garamond:400,700|Cinzel:400,700|Great+Vibes:400,700';
+
+// 2. Your custom variables and variable overwrites
+$global-background: #1E1E1E;
+$global-color: #DDDDDD;
+$global-link-color: #DA7D02;
+$global-primary-background: #DA7D02;
+$global-emphasis-color: #EEEEEE;
+$base-heading-color: #E77844;
+$global-font-family: 'EB Garamond', serif;
+$base-heading-font-family: 'Cinzel', serif;
+$text-lead-font-family: 'Great Vibes', cursive;
+$global-font-size: 18px !default;
+$global-border: #444444;
+$base-link-hover-text-decoration: none !default;
+$subnav-pill-item-hover-background: $global-link-color;
+$card-default-background: darken($global-background, 20%) !default;
+$global-link-hover-color: lighten($global-link-color, 10%) !default;
+$alert-background: transparent;
+
+// 3. Import default variables and available mixins
+@import "../../../src/_sass/uikit/variables-theme.scss";
+@import "../../../src/_sass/uikit/mixins-theme.scss";
+
+// 4. Your custom mixin overwrites
+.uk-article-lead {
+  font-family: $text-lead-font-family;
+  font-size: 1.8rem;
+}
+
+// 5. Import UIkit
+@import "../../../src/_sass/uikit/uikit-theme.scss";
+
+// 6. Custom classes
+#author {
+  font-family: $text-lead-font-family;
+  font-size: $global-large-font-size;
+  color: $global-color;
+}
