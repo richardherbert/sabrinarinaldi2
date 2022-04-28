@@ -1,0 +1,25 @@
+<header class="header uk-container uk-margin-top uk-margin-bottom">
+	<a class="uk-logo uk-flex uk-flex-center uk-margin" href="{{ site.url }}">
+		<img src="{{ '/assets/img/sabrina-rinaldi-logo.gif' | url }}" class="uk-margin-top" alt="{{ site.title | append: ' - ' | append: site.description }}" uk-img>
+	</a>
+	<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+		<div class="uk-navbar-center">
+			<div class="uk-visible@m">
+				{% include 'navigation.html', class: 'uk-navbar-nav' %}
+			</div>
+			<div class="uk-hidden@m">
+				<a class="uk-navbar-toggle" href="#" uk-toggle="target: #offcanvas-overlay">
+					<span uk-navbar-toggle-icon></span>
+					<span class="uk-margin-small-left">Menu</span>
+				</a>
+			</div>
+		</div>
+	</nav>
+	<hr>
+</header>
+<section id="offcanvas-overlay" uk-offcanvas="mode: reveal; overlay: true">
+	<div class="uk-offcanvas-bar">
+		<button class="uk-offcanvas-close" type="button" uk-close></button>
+		{% include 'navigation.html', class: 'uk-nav uk-nav-offcanvas uk-text-uppercase' %}
+	</div>
+</section>

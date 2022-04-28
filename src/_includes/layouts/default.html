@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+	<meta charset="{{ site.encoding }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="{{ page.seo.description | default: site.description }}">
+	<meta name="keywords" content="{{ page.seo.keywords | default: site.keywords }}">
+	<meta name="robots" content="{{ layout.seo.robots | default: 'index, follow' }}">
+	<meta name="author" content="{{ site.title }}">
+	<meta name="generator" content="Eleventy">
+	<title>{{ page.title | append: ' - ' | append: site.title }}</title>
+	{% if jekyll.environment == 'production' %}
+		<base href="{{ site.url }}">
+		<!-- Multilanguage -->
+		{% assign menus = site.data.menu %}
+		{% for menu in menus %}
+			{% unless menu.lang == site.lang %}
+				{% for item in menu.items %}
+					{% if item.ref == page.ref %}
+						<link rel="alternate" hreflang="{{ menu.lang }}" href="{{ menu.url | append: '/' | append: item.permalink | append: '.html' }}">
+					{% endif %}
+				{% endfor %}
+			{% endunless %}
+		{% endfor %}
+	{% endif %}
+	<link rel="icon" href="/{{ 'favicon.ico' | url }}" type="image/x-icon">
+	<link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}">
+</head>
+<body>
+	{% include 'header.html' %}
+	<main class="uk-container uk-margin">
+		<article class="uk-article uk-text-justify">
+			{% if page.layout != 'home' and page.layout != 'about' %}
+				<h1 class="uk-article-title">{{ page.title }}</h1>
+			{% endif %}
+			{% if page.layout == 'about' %}
+				<h1 class="uk-article-title">{{ site.title }}</h1>
+			{% endif %}
+			<section>
+				{{ content }}
+			</section>
+			<section class="uk-flex uk-flex-between uk-article-meta uk-margin">
+				<span>{% if page.layout == 'home' %}Last updated: 2013{% endif %}</span>
+				<span class="uk-text-uppercase uk-padding-right">
+					<!-- Multilanguage -->
+					{% if jekyll.environment == 'production' %}
+						{% assign menus = site.data.menu %}
+						{% for menu in menus %}
+							{% unless menu.lang == site.lang %}
+								{% for item in menu.items %}
+									{% if item.ref == page.ref %}
+										<a href="{{ menu.url | append: '/' | append: item.permalink | append: '.html' }}" lang="{{ menu.lang }}">{{ menu.lang }}</a>
+									{% endif %}
+								{% endfor %}
+							{% endunless %}
+						{% endfor %}
+					{% endif %}
+				</span>
+			</section>
+		</article>
+	</main>
+	{% include 'footer.html' %}
+	<script src="/assets/js/scripts.js"></script>
+</body>
+</html>
