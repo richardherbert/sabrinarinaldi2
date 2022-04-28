@@ -1,0 +1,36 @@
+{
+	"name": "sabrinarinaldi.com",
+	"version": "2.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev:en": "run-s clean gulp sass build:en",
+		"clean": "rm -rf ./_site",
+		"gulp": "gulp",
+		"sass": "sass ./src/assets/css/styles.scss:./src/assets/css/styles.css",
+		"build:en": "npx @11ty/eleventy --config .eleventy.en.js --serve"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://raffaellarinaldi@github.com/raffaellarinaldi/sabrinarinaldi2.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/raffaellarinaldi/sabrinarinaldi2/issues"
+	},
+	"homepage": "https://github.com/raffaellarinaldi/sabrinarinaldi2#readme",
+	"devDependencies": {
+		"@11ty/eleventy": "^1.0.1",
+		"gulp": "^4.0.2",
+		"gulp-concat": "^2.6.1",
+		"gulp-uglify": "^3.0.2",
+		"npm-run-all": "^4.1.5",
+		"sass": "^1.51.0"
+	},
+	"dependencies": {
+		"jquery": "^3.6.0",
+		"uikit": "^3.10.1"
+	}
+}
