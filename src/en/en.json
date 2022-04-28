@@ -1,0 +1,45 @@
+{
+	"site": {
+		"url": "https://www.sabrinarinaldi.com",
+		"keywords": "sabrina, rinaldi, sabrina rinaldi, italian wildlife artist, wildlife artist, wildlife painter, wildlife",
+		"lang": "en",
+		"encoding": "utf-8",
+		"locale": "en_US",
+		"title": "Sabrina Rinaldi",
+		"strings": {
+			"form": {
+				"title": "Contact",
+				"intro": "To contact SITETITLE, please click <a href=\"mailto:HERE\">here</a> or fill in the following form (all fields required).",
+				"name": {
+					"label": "Name",
+					"text": "Write your Name here"
+				},
+				"email": {
+					"label": "Email",
+					"text": "Write your Email here (must be valid)"
+				},
+				"subject": {
+					"label": "Subject",
+					"text": "Write a Subject for your Message"
+				},
+				"tel": {
+					"label": "Phone",
+					"text": "Write your Phone Number"
+				},
+				"message": {
+					"label": "Message",
+					"text": "Write your Message"
+				},
+				"consent": {
+					"label": "Personal data treatment authorization",
+					"text": "In compliance with the Italian Legislative Decree no. 196 dated 30/06/2003 and the Regulation (EU) 2016/679, I hereby authorize SITETITLE to use my data for the purpose of replying to this form."
+				},
+				"submit": "Submit",
+				"alerts": {
+					"success": "Your inquiry has been sent. Thank you!",
+					"danger": "Sorry, the form could not be submitted. Please try again later."
+				}
+			}
+		}
+	}
+}
