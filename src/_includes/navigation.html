@@ -1,0 +1,22 @@
+{% assign menus = menu %}
+
+{% for menu in menus %}
+	{% if menu.lang == site.lang %}
+		<ul class="{{ class }}">
+			{% for item in menu.items %}
+				{% unless item.permalink == 'index' %}
+					{% if item.ref == 'contact' %}
+						{% capture item_permalink %}mailto:{{ site.email | encode_email }}{% endcapture %}
+					{% else %}
+						{% capture item_permalink %}../{{ item.permalink }}{% endcapture %}
+					{% endif %}
+					<li class="{% if page.permalink == item.permalink or item.permalink contains page.parent %}uk-active{% endif %}">
+						<a href="{{ item_permalink }}">
+							<span>{{ item.title }}</span>
+						</a>
+					</li>
+				{% endunless %}
+			{% endfor %}
+		</ul>
+	{% endif %}
+{% endfor %}
