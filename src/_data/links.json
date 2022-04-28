@@ -1,0 +1,139 @@
+[
+	{
+		"group": {
+			"en": "Art & Artists",
+			"it": "Arte & Artisti"
+		},
+		"items": [
+			{
+				"url": "http://johnpicking.com",
+				"title": {
+					"en": "John Picking",
+					"it": "John Picking"
+				},
+				"desc": {
+					"en": "anglo-italian painter",
+					"it": "pittore anglo-italiano"
+				}
+			}
+		]
+	},
+	{
+		"group": {
+			"en": "Activism",
+			"it": "Attivismo"
+		},
+		"items": [
+			{
+				"url": "https://wwf.ch",
+				"title": {
+					"en": "WWF",
+					"it": "WWF"
+				},
+				"desc": {
+					"en": null,
+					"it": null
+				}
+			},
+			{
+				"url": "https://greenpeace.org",
+				"title": {
+					"en": "Greenpeace",
+					"it": "Greenpeace"
+				},
+				"desc": {
+					"en": null,
+					"it": null
+				}
+			},
+			{
+				"url": "https://www.msf.org",
+				"title": {
+					"en": "Doctors Without Borders",
+					"it": "Medici Senza Frontiere"
+				},
+				"desc": {
+					"en": null,
+					"it": null
+				}
+			},
+			{
+				"url": "https://www.lav.it",
+				"title": {
+					"en": null,
+					"it": "LAV"
+				},
+				"desc": {
+					"en": null,
+					"it": null
+				}
+			},
+			{
+				"url": "https://www.lipu.it",
+				"title": {
+					"en": null,
+					"it": "LIPU"
+				},
+				"desc": {
+					"en": null,
+					"it": null
+				}
+			},
+			{
+				"url": "http://www.abolizionecaccia.it",
+				"title": {
+					"en": null,
+					"it": "Lega Abolizione Caccia"
+				},
+				"desc": {
+					"en": null,
+					"it": null
+				}
+			}
+		]
+	},
+	{
+		"group": {
+			"en": null,
+			"it": "Altro"
+		},
+		"items": [
+			{
+				"url": "https://www.facebook.com/Aderiamo-386806237997596/",
+				"title": {
+					"it": "Aderiamo"
+				},
+				"desc": {
+					"it": "movimento giovanile adrense"
+				}
+			},
+			{
+				"url": "https://www.facebook.com/IdeaCivicaAdroTorbiato",
+				"title": {
+					"it": "Idea Civica"
+				},
+				"desc": {
+					"it": "movimento politico apartitico e di informazione per Adro e la Franciacorta"
+				}
+			},
+			{
+				"url": "http://onoriobelussi.altervista.org",
+				"title": {
+					"it": "Onorio Belussi"
+				},
+				"desc": {
+					"it": "contadino e scienziato della domenica"
+				}
+			},
+			{
+				"url": "http://scuolalavittoria.org",
+				"title": {
+					"it": "Fondazione Asilo Infantile La Vittoria"
+				},
+				"desc": {
+					"it": "scuola materna e micronido integrato ad Adro"
+				}
+			}
+		]
+	}
+]

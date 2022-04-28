@@ -1,0 +1,92 @@
+[
+	{
+		"lang": "en",
+		"url": "https://www.sabrinarinaldi.com",
+		"items": [
+			{
+				"title": "Home",
+				"permalink": "index",
+				"ref": "index"
+			},
+			{
+				"title": "Gallery",
+				"permalink": "gallery",
+				"ref": "gallery"
+			},
+			{
+				"title": "About the Artist",
+				"permalink": "about-the-artist",
+				"ref": "about"
+			},
+			{
+				"title": "Expo",
+				"permalink": "expo",
+				"ref": "expo"
+			},
+			{
+				"title": "Critiques",
+				"permalink": "critiques",
+				"ref": "critiques"
+			},
+			{
+				"title": "Commissions",
+				"permalink": "commissions",
+				"ref": "commissions"
+			},
+			{
+				"title": "Links",
+				"permalink": "links",
+				"ref": "links"
+			},
+			{
+				"title": "Contact",
+				"ref": "contact"
+			}
+		]
+	},
+	{
+		"lang": "it",
+		"url": "https://www.sabrinarinaldi.it",
+		"items": [
+			{
+				"title": "Home",
+				"permalink": "index",
+				"ref": "index"
+			},
+			{
+				"title": "Galleria",
+				"permalink": "galleria",
+				"ref": "gallery"
+			},
+			{
+				"title": "Biografia",
+				"permalink": "biografia",
+				"ref": "about"
+			},
+			{
+				"title": "Expo",
+				"permalink": "expo",
+				"ref": "expo"
+			},
+			{
+				"title": "Recensioni",
+				"permalink": "recensioni",
+				"ref": "critiques"
+			},
+			{
+				"title": "Commissioni",
+				"permalink": "commissioni",
+				"ref": "commissions"
+			},
+			{
+				"title": "Links",
+				"permalink": "links",
+				"ref": "links"
+			},
+			{
+				"title": "Contatti",
+				"ref": "contact"
+			}
+		]
+	}
+]
