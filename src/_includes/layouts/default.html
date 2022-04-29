@@ -9,20 +9,19 @@
 	<meta name="author" content="{{ site.title }}">
 	<meta name="generator" content="Eleventy">
 	<title>{{ page.title | append: ' - ' | append: site.title }}</title>
-	{% if jekyll.environment == 'production' %}
-		<base href="{{ site.url }}">
-		<!-- Multilanguage -->
-		{% assign menus = site.data.menu %}
-		{% for menu in menus %}
-			{% unless menu.lang == site.lang %}
-				{% for item in menu.items %}
-					{% if item.ref == page.ref %}
-						<link rel="alternate" hreflang="{{ menu.lang }}" href="{{ menu.url | append: '/' | append: item.permalink | append: '.html' }}">
-					{% endif %}
-				{% endfor %}
-			{% endunless %}
-		{% endfor %}
-	{% endif %}
+	<base href="{{ site.url }}">
+	<!-- Multilanguage -->
+	{% assign menus = menu %}
+
+	{% for menu in menus %}
+		{% unless menu.lang == site.lang %}
+			{% for item in menu.items %}
+				{% if item.ref == ref %}
+					<link rel="alternate" hreflang="{{ site.lang }}" href="{{ site.url | append: '/' | append: item.fileslug | append: '/' | }}">
+				{% endif %}
+			{% endfor %}
+		{% endunless %}
+	{% endfor %}
 	<link rel="icon" href="/{{ 'favicon.ico' | url }}" type="image/x-icon">
 	<link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}">
 </head>
@@ -40,21 +39,20 @@
 				{{ content }}
 			</section>
 			<section class="uk-flex uk-flex-between uk-article-meta uk-margin">
-				<span>{% if page.layout == 'home' %}Last updated: 2013{% endif %}</span>
+				<span>{% if page.fileSlug == '' %}Last updated: 2013{% endif %}</span>
 				<span class="uk-text-uppercase uk-padding-right">
 					<!-- Multilanguage -->
-					{% if jekyll.environment == 'production' %}
-						{% assign menus = site.data.menu %}
-						{% for menu in menus %}
-							{% unless menu.lang == site.lang %}
-								{% for item in menu.items %}
-									{% if item.ref == page.ref %}
-										<a href="{{ menu.url | append: '/' | append: item.permalink | append: '.html' }}" lang="{{ menu.lang }}">{{ menu.lang }}</a>
-									{% endif %}
-								{% endfor %}
-							{% endunless %}
-						{% endfor %}
-					{% endif %}
+					{% assign menus = menu %}
+
+					{% for menu in menus %}
+						{% unless menu.lang == site.lang %}
+							{% for item in menu.items %}
+								{% if item.ref == ref %}
+									<a href="{{ site.url | append: '/' | append: item.fileslug }}" lang="{{ site.lang }}">{{ site.lang }}</a>
+								{% endif %}
+							{% endfor %}
+						{% endunless %}
+					{% endfor %}
 				</span>
 			</section>
 		</article>
