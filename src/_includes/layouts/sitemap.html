@@ -7,9 +7,9 @@ layout: layouts/null
 <?xml version="1.0" encoding="{{ site.encoding }}"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	{% for page in pages %}
-		{% unless page.permalink contains 'xml' or page.layout.seo.robots contains 'noindex' %}
+		{% unless fileslug contains 'xml' or layout.seo.robots contains 'noindex' %}
 			<url>
-				<loc>{{ site.url | append: page.url | append: '.html' }}</loc>
+				<loc>{{ site.url | append: url }}</loc>
 			</url>
 		{% endunless %}
 	{% endfor %}

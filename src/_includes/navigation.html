@@ -10,7 +10,7 @@
 					{% else %}
 						{% capture item_fileslug %}/{{ item.fileslug }}/{% endcapture %}
 					{% endif %}
-					<li class="{% if page.fileSlug == item.fileslug %}uk-active{% endif %}">
+					<li class="{% if fileSlug == item.fileslug %}uk-active{% endif %}">
 						<a href="{{ item_fileslug }}">
 							<span>{{ item.title }}</span>
 						</a>
