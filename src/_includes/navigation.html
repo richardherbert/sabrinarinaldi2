@@ -6,7 +6,7 @@
 			{% for item in menu.items %}
 				{% unless item.fileslug == 'index' %}
 					{% if item.ref == 'contact' %}
-						{% capture item_fileslug %}mailto:{{ site.email | encode_email }}{% endcapture %}
+						{% capture item_fileslug %}mailto:{{ site.email }}{% endcapture %}
 					{% else %}
 						{% capture item_fileslug %}/{{ item.fileslug }}/{% endcapture %}
 					{% endif %}
