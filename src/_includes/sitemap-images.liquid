@@ -1,15 +1,10 @@
----
-layout: layouts/null
----
-
-{% assign galleries = site.data.galleries %}
-
 <?xml version="1.0" encoding="{{ site.encoding }}"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 	<url>
-		<loc>{{ site.url | append: '/gallery.html' }}</loc>
+		<loc>{{ site.url | append: '/gallery/' }}</loc>
 		{% for gallery in galleries %}
 			{% assign images = gallery.items | sort: 'weight' | reverse %}
+
 			{% for image in images %}
 				<image:image>
 					<image:title>{{ image.title[site.lang] }}</image:title>
