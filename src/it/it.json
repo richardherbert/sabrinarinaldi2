@@ -1,0 +1,48 @@
+{
+	"site": {
+		"url": "https://www.sabrinarinaldi.it",
+		"keywords": "sabrina, rinaldi, sabrina rinaldi, pittore animali italiano, pittore wildlife, artista wildlife, wildlife",
+		"lang": "it",
+		"encoding": "utf-8",
+		"locale": "it_IT",
+		"strings": {
+			"form": {
+				"title": "Contatti",
+				"intro": "Per contattare SITETITLE, cliccare <a href=\"mailto:HERE\">qui</a> oppure compilare il form sottostante (tutti i campi sono obbligatori).",
+				"name": {
+					"label": "Nome",
+					"text": "Scrivere il Nome"
+				},
+				"email": {
+					"label": "Email",
+					"text": "Scrivere l’Email (deve essere valida)"
+				},
+				"subject": {
+					"label": "Oggetto",
+					"text": "Scrivere l’Oggetto del Messaggio"
+				},
+				"tel": {
+					"label": "Telefono",
+					"text": "Scrivere il Numero di Telefono"
+				},
+				"message": {
+					"label": "Messaggio",
+					"text": "Scrivere il Messaggio"
+				},
+				"consent": {
+					"label": "Consenso al trattamento dei dati personali",
+					"text": "In ottemperanza con l’art. 13 Dlgs. 196/2003 e l’art. 13 del Reg. UE 679/2016, autorizzo SITETITLE ad usare i miei dati allo scopo di rispondere alla richiesta di contatto."
+				},
+				"submit": "Invia",
+				"alerts": {
+					"success": "La richiesta è stata inviata. Grazie!",
+					"danger": "Non è stato possibile inviare il modulo. Per favore riprovare più tardi."
+				}
+			}
+		},
+		"exclude": [
+			"_pages/english",
+			"media/images/gallery/original"
+		]
+	}
+}
