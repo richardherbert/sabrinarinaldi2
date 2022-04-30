@@ -1,11 +1,11 @@
 <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: push; autoplay: true">
 	<ul class="uk-slideshow-items">
-		{% for image in site.static_files %}
-			{% if image.path contains 'media/images/home/slideshow' %}
+		{% for image in collections.static_files %}
+			{% if image.pathFilename contains 'media/images/home/slideshow' %}
 				<li>
-					<img src="{{ image.path | url }}" alt="{{ image.basename | replace: '_', ' ' | slice: 2, image.basename.size | capitalize }}" uk-cover>
+					<img src="{{ image.pathFilename | url }}" alt="{{ image.description }}" uk-cover>
 					<div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
-						<h2 class="uk-margin-remove">{{ image.basename | replace: '_', ' ' | slice: 2, image.basename.size | capitalize }}</h2>
+						<h2 class="uk-margin-remove">{{ image.description }}</h2>
 					</div>
 				</li>
 			{% endif %}
