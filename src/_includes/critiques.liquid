@@ -1,0 +1,12 @@
+{% for item in collection | sort: 'weight' %}
+	<article class="uk-article">
+		<section class="uk-clearfix">
+			<h3>{{ item.data.title }}</h3>
+			{{ item.templateContent }}
+		</section>
+
+		{% if item.data.author %}
+			<p class="uk-margin-remove uk-align-right" id="author">{{ item.data.author }}</p>
+		{% endif %}
+	</article>
+{% endfor %}
