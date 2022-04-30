@@ -9,6 +9,8 @@
 		"dev:en": "run-s clean gulp sass serve:en",
 		"dev:it": "run-s clean gulp sass serve:it",
 
+		"deploy": "npm-run-all clean gulp sass --parallel deploy:**",
+
 		"clean": "rm -rf ./_site",
 		"gulp": "gulp",
 
@@ -16,8 +18,15 @@
 
 		"build:en": "npx @11ty/eleventy --config .eleventy.en.js",
 		"build:it": "npx @11ty/eleventy --config .eleventy.it.js",
+
 		"serve:en": "ENVIRONMENT=development npx @11ty/eleventy --config .eleventy.en.js --port=8080 --serve",
-		"serve:it": "ENVIRONMENT=development npx @11ty/eleventy --config .eleventy.it.js --port=8081 --serve"
+		"serve:it": "ENVIRONMENT=development npx @11ty/eleventy --config .eleventy.it.js --port=8081 --serve",
+
+		"deploy:en": "run-s build:en ftp:en",
+		"deploy:it": "run-s build:it ftp:it",
+
+		"ftp:en": "node ftp_en",
+		"ftp:it": "node ftp_it"
 	},
 	"repository": {
 		"type": "git",
