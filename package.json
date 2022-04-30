@@ -16,9 +16,8 @@
 
 		"build:en": "npx @11ty/eleventy --config .eleventy.en.js",
 		"build:it": "npx @11ty/eleventy --config .eleventy.it.js",
-
-		"serve:en": "npx @11ty/eleventy --config .eleventy.en.js --port=8080 --serve",
-		"serve:it": "npx @11ty/eleventy --config .eleventy.it.js --port=8081 --serve"
+		"serve:en": "ENVIRONMENT=development npx @11ty/eleventy --config .eleventy.en.js --port=8080 --serve",
+		"serve:it": "ENVIRONMENT=development npx @11ty/eleventy --config .eleventy.it.js --port=8081 --serve"
 	},
 	"repository": {
 		"type": "git",
