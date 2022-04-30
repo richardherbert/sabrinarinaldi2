@@ -33,6 +33,8 @@
 	"homepage": "https://github.com/raffaellarinaldi/sabrinarinaldi2#readme",
 	"devDependencies": {
 		"@11ty/eleventy": "^1.0.1",
+		"basic-ftp": "^4.6.6",
+		"dotenv": "^16.0.0",
 		"gulp": "^4.0.2",
 		"gulp-concat": "^2.6.1",
 		"gulp-uglify": "^3.0.2",
