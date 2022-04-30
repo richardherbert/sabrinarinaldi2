@@ -3,7 +3,7 @@ require( 'dotenv' ).config();
 var environment = process.env.ENVIRONMENT || 'production';
 
 if ( environment === 'production' ) {
-	var url = 'https://www.sabrinarinaldi.it';
+	var url = 'https://www.sabrinarinaldi.it/';
 } else {
 	var url = '/';
 }

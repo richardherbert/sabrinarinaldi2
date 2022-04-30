@@ -17,7 +17,7 @@
 		{% unless menu.lang == site.lang %}
 			{% for item in menu.items %}
 				{% if item.ref == ref %}
-					<link rel="alternate" hreflang="{{ site.lang }}" href="{{ site.url | append: '/' | append: item.fileslug | append: '/' | }}">
+					<link rel="alternate" hreflang="{{ site.lang }}" href="{{ site.url | append: item.fileslug | append: '/' | }}">
 				{% endif %}
 			{% endfor %}
 		{% endunless %}
@@ -48,7 +48,7 @@
 						{% unless menu.lang == site.lang %}
 							{% for item in menu.items %}
 								{% if item.ref == ref %}
-									<a href="{{ site.url | append: '/' | append: item.fileslug }}" lang="{{ site.lang }}">{{ menu.lang }}</a>
+									<a href="{{ site.url | append: item.fileslug }}" lang="{{ site.lang }}">{{ menu.lang }}</a>
 								{% endif %}
 							{% endfor %}
 						{% endunless %}
