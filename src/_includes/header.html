@@ -5,7 +5,7 @@
 	<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
 		<div class="uk-navbar-center">
 			<div class="uk-visible@m">
-				{% include 'navigation.html', class: 'uk-navbar-nav' %}
+				{%- include 'navigation.html', class: 'uk-navbar-nav' %}
 			</div>
 			<div class="uk-hidden@m">
 				<a class="uk-navbar-toggle" href="#" uk-toggle="target: #offcanvas-overlay">
@@ -20,6 +20,6 @@
 <section id="offcanvas-overlay" uk-offcanvas="mode: reveal; overlay: true">
 	<div class="uk-offcanvas-bar">
 		<button class="uk-offcanvas-close" type="button" uk-close></button>
-		{% include 'navigation.html', class: 'uk-nav uk-nav-offcanvas uk-text-uppercase' %}
+		{%- include 'navigation.html', class: 'uk-nav uk-nav-offcanvas uk-text-uppercase' %}
 	</div>
 </section>

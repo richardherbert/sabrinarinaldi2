@@ -11,53 +11,53 @@
 	<title>{{ title | append: ' - ' | append: site.title }}</title>
 	<base href="{{ site.url }}">
 	<!-- Multilanguage -->
-	{% assign menus = menu %}
+	{%- assign menus = menu %}
 
-	{% for menu in menus %}
-		{% unless menu.lang == site.lang %}
-			{% for item in menu.items %}
-				{% if item.ref == ref %}
+	{%- for menu in menus %}
+		{%- unless menu.lang == site.lang %}
+			{%- for item in menu.items %}
+				{%- if item.ref == ref %}
 					<link rel="alternate" hreflang="{{ site.lang }}" href="{{ site.url | append: item.fileslug | append: '/' | }}">
-				{% endif %}
-			{% endfor %}
-		{% endunless %}
-	{% endfor %}
+				{%- endif %}
+			{%- endfor %}
+		{%- endunless %}
+	{%- endfor %}
 	<link rel="icon" href="/{{ 'favicon.ico' }}" type="image/x-icon">
 	<link rel="stylesheet" href="{{ '/assets/css/styles.css' }}">
 </head>
 <body>
-	{% include 'header.html' %}
+	{%- include 'header.html' %}
 	<main class="uk-container uk-margin">
 		<article class="uk-article uk-text-justify">
-			{% if layout != 'home' and layout != 'about' %}
+			{%- if layout != 'home' and layout != 'about' %}
 				<h1 class="uk-article-title">{{ title }}</h1>
-			{% endif %}
-			{% if layout == 'about' %}
+			{%- endif %}
+			{%- if layout == 'about' %}
 				<h1 class="uk-article-title">{{ site.title }}</h1>
-			{% endif %}
+			{%- endif %}
 			<section>
 				{{ content }}
 			</section>
 			<section class="uk-flex uk-flex-between uk-article-meta uk-margin">
-				<span>{% if fileSlug == '' %}Last updated: 2013{% endif %}</span>
+				<span>{%- if fileSlug == '' %}Last updated: 2013{%- endif %}</span>
 				<span class="uk-text-uppercase uk-padding-right">
 					<!-- Multilanguage -->
-					{% assign menus = menu %}
+					{%- assign menus = menu %}
 
-					{% for menu in menus %}
-						{% unless menu.lang == site.lang %}
-							{% for item in menu.items %}
-								{% if item.ref == ref %}
+					{%- for menu in menus %}
+						{%- unless menu.lang == site.lang %}
+							{%- for item in menu.items %}
+								{%- if item.ref == ref %}
 									<a href="{{ site.url | append: item.fileslug }}" lang="{{ site.lang }}">{{ menu.lang }}</a>
-								{% endif %}
-							{% endfor %}
-						{% endunless %}
-					{% endfor %}
+								{%- endif %}
+							{%- endfor %}
+						{%- endunless %}
+					{%- endfor %}
 				</span>
 			</section>
 		</article>
 	</main>
-	{% include 'footer.html' %}
+	{%- include 'footer.html' %}
 	<script src="/assets/js/scripts.js"></script>
 </body>
 </html>

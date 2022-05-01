@@ -1,23 +1,23 @@
-{% for link in links %}
-	{% if link.group[ site.lang ] != blank %}
+{%- for link in links %}
+	{%- if link.group[ site.lang ] != blank %}
 		<h2>{{ link.group[ site.lang ] }}</h2>
 		<ul class="uk-list uk-list-large">
-	{% endif %}
+	{%- endif %}
 
-	{% assign items = link.items | sort: 'title[ site.lang ]' %}
+	{%- assign items = link.items | sort: 'title[ site.lang ]' %}
 
-	{% if items %}
-		{% for item in items %}
-			{% if item.title[ site.lang ] %}
+	{%- if items %}
+		{%- for item in items %}
+			{%- if item.title[ site.lang ] %}
 				<li>
 					<a href="{{ item.url }}" target="_blank" rel="nofollow noopener">{{ item.title[ site.lang ] }}</a>
-					{% if item.desc[ site.lang ] %} - {{ item.desc[ site.lang ] }}{% endif %}
+					{%- if item.desc[ site.lang ] %} - {{ item.desc[ site.lang ] }}{%- endif %}
 				</li>
-			{% endif %}
-		{% endfor %}
+			{%- endif %}
+		{%- endfor %}
 
-		{% if link.group[ site.lang ] %}
+		{%- if link.group[ site.lang ] %}
 			</ul>
-		{% endif %}
-	{% endif %}
-{% endfor %}
+		{%- endif %}
+	{%- endif %}
+{%- endfor %}
