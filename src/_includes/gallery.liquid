@@ -32,8 +32,8 @@
 			{% for image in images %}
 				<li data-tags="{{ gallery.group[site.lang] | downcase }}" data-name="{{ image.title[site.lang] }}">
 					<figure class="uk-card uk-card-default uk-card-body">
-						<a href="{{ '/media/images/gallery/' | append: image.src | url }}" data-caption="{{ image.title[site.lang] }}">
-							<img data-src="{{ '/media/images/gallery/' | append: image.src | url }}" alt="{{ image.title[site.lang] }}" uk-img>
+						<a href="{{ '/media/images/gallery/' | append: image.src }}" data-caption="{{ image.title[site.lang] }}">
+							<img data-src="{{ '/media/images/gallery/' | append: image.src }}" alt="{{ image.title[site.lang] }}" uk-img>
 						</a>
 						<figcaption class="uk-padding">
 							<h4>{{ image.title[site.lang] }}</h4>
