@@ -21,7 +21,7 @@ module.exports = function( eleventyConfig ) {
 					let description = path.basename( pathFilename )
 						.replace( /^\d*_/, '' )
 						.replace( /.jpg/, '' )
-						.replace( /_/, ' ' )
+						.replace( /_/g, ' ' )
 						.replace( /^\w/, function( firstChar ) {
 							return firstChar.toUpperCase();
 						} );
@@ -34,4 +34,12 @@ module.exports = function( eleventyConfig ) {
 
 		return files;
 	} );
+
+	eleventyConfig.addFilter( 'dump', function( anything ) {
+		console.log( 'dump:', anything );
+	} );
+
+	eleventyConfig.addShortcode( 'debug', ( value ) =>
+		`<pre style="padding: 10px; font-size: 14px; font-family: monospace;">debug: ${ JSON.stringify( value, null, 2 ) }</pre>`
+	);
 };
