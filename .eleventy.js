@@ -22,9 +22,7 @@ module.exports = function( eleventyConfig ) {
 						.replace( /^\d*_/, '' )
 						.replace( /.jpg/, '' )
 						.replace( /_/g, ' ' )
-						.replace( /^\w/, function( firstChar ) {
-							return firstChar.toUpperCase();
-						} );
+						.replace( /(^\w{1})|(\s+\w{1})/g, firstLetter => firstLetter.toUpperCase() );
 
 					return { 'pathFilename': pathFilename, 'description': description };
 				} );
